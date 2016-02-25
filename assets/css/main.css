@@ -16,16 +16,6 @@
 	}
 
 
-input:invalid {
-  border: 1px solid red;
-}
-
-input:valid {
-  border: 1px solid green;
-}
-
-
-
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -1901,6 +1891,85 @@ input:valid {
 		border: 0;
 	}
 
+
+/*Feedback*/
+
+.shadowed2 {
+    -webkit-filter: drop-shadow(2px 2px 1px rgba(201, 201, 201, 0.5));
+    filter: drop-shadow(2px 2px 1px rgba(201, 201, 201, 0.5));
+}
+.shadow_box {
+    width: 278px;
+    background: #FFFFFF;
+    font-size: 16px;
+    font-style: italic;
+    padding-bottom: 18px;
+    box-shadow: 0;
+    transition: all 0.73s ease 0s;
+    z-index: 2;
+}
+
+.feedback_author {
+    margin-top: 27px;
+    margin-bottom: 31px;
+    font-family: LatoRegular, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+}
+
+.feedback_text {
+    width: 208px;
+    margin: 0 auto;
+    font-family: LatoRegular, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 170%;
+}
+
+.quote_icon {
+    width: 32px;
+    margin: 0 auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.feedback_inner {
+    width: 88%;
+    margin: 0 auto;
+}
+
+.feedback_block {
+    width: 278px;
+    background: #FFFFFF;
+    border: 1px #FFFFFF;
+    border-radius: 2px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.feedback_outer {
+    /* height: 433px; */
+    background: #f7f4ef;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.feedback {
+    text-align: center;
+}
+
+
+
+
+
+
 /* Table */
 
 	table {
@@ -2046,6 +2115,15 @@ input:valid {
 		color: #fff;
 		text-align: center;
 		padding: 6em 0 6em 0;
+	}
+#promo-wrapper2 {
+		position: relative;
+		background-color: #FFAB76;;
+		background-size: 192px 0px, cover;
+		background-position: top left, center center;
+		color: #fff;
+		text-align: center;
+		padding: 1em 0 1em 0;
 	}
 
 	#footer-wrapper {
@@ -2560,7 +2638,7 @@ input:valid {
 		/* Content */
 
 			#content {
-                    
+                color:lightgray
 				margin-bottom: 3em;
 			}
 
@@ -2718,6 +2796,18 @@ input:valid {
 				padding-bottom: 1px;
 			}
 
+        #page-wrapper2 {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				padding-bottom: 1px;
+                background-color:gainsboro
+			}
 			#navButton {
 				-moz-backface-visibility: hidden;
 				-webkit-backface-visibility: hidden;
@@ -2976,6 +3066,7 @@ input:valid {
 		/* Content */
 
 			#content {
+                color:gainsboro
 				margin-bottom: 2em;
 			}
 
