@@ -29,8 +29,8 @@
 							<nav id="nav">
 								<ul>
 
-									<li><a href="index.html"><font face = "Merienda One">Home</font></a></li>
-                                    <li><a href="AboutUs.html"><font face = "Merienda One">About Us</font></a></li>
+									<li><a href="index.php"><font face = "Merienda One">Home</font></a></li>
+                                    <li><a href="AboutUs.php"><font face = "Merienda One">About Us</font></a></li>
                                     <li><a href="SignUp.php"><font face = "Merienda One">Sign Up</font></a></li>
                                     
 								</ul>

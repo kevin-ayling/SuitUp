@@ -23,8 +23,8 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-								<li><a href="index.html"><font face = "Merienda One">Home</font></a></li>
-                                    <li><a href="AboutUs.html"><font face = "Merienda One">About Us</font></a></li>
+								<li><a href="index.php"><font face = "Merienda One">Home</font></a></li>
+                                    <li><a href="AboutUs.php"><font face = "Merienda One">About Us</font></a></li>
                                     <li><a href="SignUp.php"><font face = "Merienda One">Sign Up</font></a></li>
 								</ul>
 							</nav>
@@ -41,7 +41,8 @@
 								<!-- Content -->
 									<article id="content">
 										<header>
-                                            <h2><center>About Us</center> </h2>
+                                             <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+                                            <h2><center><font face = "Pacifico">About Us</font></center> </h2>
 <center><img src="images/jessLogo.png" alt="" height ="100" width="150"/></center>
               
 											<p>We provide a unique service designed to clean up your social media footprint and prepare a professional online appearance.</p>
@@ -62,21 +63,21 @@ Chief Financial Officer – Henry Garrett</p>
 
 								<!-- Sidebar -->
 									<section id="sidebar">
-										<section>
+										<section style="color:#FFAB76; background-color: #242E70; padding-left: 2em; padding-right: 1em; padding-bottom: 1em; padding-top: 1em">
 											<header>
-												<h3>Step it up!</h3>
+                                                <h3 style="color:#FFAB76;"><font face = "Pacifico">Step it up!</font></h3>
 											</header>
 											<p>Don't let anyone's first impression of you be negative. Create a professional appearance online so everyone can see. Don't leave it up to chance. Sign up today!</p>
 										</section>
                                 </section>
-										<section>
+										<section style="color:#242E70; background-color: #19BCCB; padding-left: 2em; padding-right: 1em; padding-bottom: 1em; padding-top: 1em">
 		
 											<header>
-												<h3>Dress to Impress</h3>
+                                                <h3 style="color:#242E70;"><font face = "Pacifico">Dress to Impress</font></h3>
 											</header>
 											<p>You wouldn't leave your house without dressing properly, don't leave your online presence undressed either. You can meet just as many people online, don't let them down! Suit Up!</p>
 											<ul class="actions">
-												<li><a href="SignUp.php" class="button">Sign Up</a></li>
+												<li><a href="SignUp.php" class="button" style = "background-color: #FFAB76; margin: 0  auto;": >Sign Up</a></li>
 											</ul>
 										</section>
 									
