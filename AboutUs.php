@@ -47,7 +47,7 @@
               
 											<p>We provide a unique service designed to clean up your social media footprint and prepare a professional online appearance.</p>
 										</header>
-										<img src="images/icons.png" alt="" />
+										<center><img src="images/icons.png" alt="" /></center>
 										<p>
 When it comes to applying for a job, social media can make or break a candidate for recruiters and employers alike. The generation today trying to get hired in the work force is the first to experience social media as a tool used for recruitment. If an employer sees a potential hire does not show descent discretion online it could be the difference in getting the job or continuing the job search. 
 Our team of professionals with years of experience in social media outreach and public relations will take control of your entire social media presence. With your permission, we will change any platform you want us to upgrade and improve with guidance from you the entire way. Our services can include Facebook, Twitter, Instagram and even LinkedIn. Pictures, comments and tweets will all be reviewed to determine what we as a team consider appropriate and act from there. We will also fill in information that employers look for, making sure that you are the best candidate possible.
