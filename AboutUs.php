@@ -73,14 +73,21 @@ Chief Financial Officer – Henry Garrett</p>
 										<section style="color:#242E70; background-color: #19BCCB; padding-left: 2em; padding-right: 1em; padding-bottom: 1em; padding-top: 1em">
 		
 											<header>
-                                                <h3 style="color:#242E70;"><font face = "Pacifico">Dress to Impress</font></h3>
+                                                <h3 style="color:#242E70;"><font face = "Pacifico">How it Works</font></h3>
 											</header>
-											<p>You wouldn't leave your house without dressing properly, don't leave your online presence undressed either. You can meet just as many people online, don't let them down! Suit Up!</p>
+											<p>We have image recognizing software automatically review your online profiles and generate a report of possible red flags. We also have experienced career consultants available for our premium members! Sign up for a plan today!</p>
 											<ul class="actions">
 												<li><a href="SignUp.php" class="button" style = "background-color: #FFAB76; margin: 0  auto;": >Sign Up</a></li>
 											</ul>
 										</section>
-									
+									<section id="sidebar">
+										<section style="color:#FFAB76; background-color: #242E70; padding-left: 2em; padding-right: 1em; padding-bottom: 1em; padding-top: 1em">
+											<header>
+                                                <h3 style="color:#FFAB76;"><font face = "Pacifico">Dress to Impress</font></h3>
+											</header>
+											<p>You wouldn't leave your house without dressing properly, don't leave your online presence undressed either. You can meet just as many people online, don't let them down! Suit Up!</p>
+										</section>
+                                </section>
 
 							</div>
 						
