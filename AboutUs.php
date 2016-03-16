@@ -47,7 +47,7 @@
               
 											<p>We provide a unique service designed to clean up your social media footprint and prepare a professional online appearance.</p>
 										</header>
-										<img src="images/icons.png" alt="" />
+										<center><img src="images/icons.png" alt="" /></center>
 										<p>
 When it comes to applying for a job, social media can make or break a candidate for recruiters and employers alike. The generation today trying to get hired in the work force is the first to experience social media as a tool used for recruitment. If an employer sees a potential hire does not show descent discretion online it could be the difference in getting the job or continuing the job search. 
 Our team of professionals with years of experience in social media outreach and public relations will take control of your entire social media presence. With your permission, we will change any platform you want us to upgrade and improve with guidance from you the entire way. Our services can include Facebook, Twitter, Instagram and even LinkedIn. Pictures, comments and tweets will all be reviewed to determine what we as a team consider appropriate and act from there. We will also fill in information that employers look for, making sure that you are the best candidate possible.
@@ -73,14 +73,21 @@ Chief Financial Officer – Henry Garrett</p>
 										<section style="color:#242E70; background-color: #19BCCB; padding-left: 2em; padding-right: 1em; padding-bottom: 1em; padding-top: 1em">
 		
 											<header>
-                                                <h3 style="color:#242E70;"><font face = "Pacifico">Dress to Impress</font></h3>
+                                                <h3 style="color:#242E70;"><font face = "Pacifico">How it Works</font></h3>
 											</header>
-											<p>You wouldn't leave your house without dressing properly, don't leave your online presence undressed either. You can meet just as many people online, don't let them down! Suit Up!</p>
+											<p>We have image recognizing software automatically review your online profiles and generate a report of possible red flags. We also have experienced career consultants available for our premium members! Sign up for a plan today!</p>
 											<ul class="actions">
 												<li><a href="SignUp.php" class="button" style = "background-color: #FFAB76; margin: 0  auto;": >Sign Up</a></li>
 											</ul>
 										</section>
-									
+									<section id="sidebar">
+										<section style="color:#FFAB76; background-color: #242E70; padding-left: 2em; padding-right: 1em; padding-bottom: 1em; padding-top: 1em">
+											<header>
+                                                <h3 style="color:#FFAB76;"><font face = "Pacifico">Dress to Impress</font></h3>
+											</header>
+											<p>You wouldn't leave your house without dressing properly, don't leave your online presence undressed either. You can meet just as many people online, don't let them down! Suit Up!</p>
+										</section>
+                                </section>
 
 							</div>
 						

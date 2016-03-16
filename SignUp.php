@@ -55,7 +55,7 @@
                         <section class="4u 12u (narrower) feature" style="background-color: #242E70; padding-right: 2em; padding-bottom: 2em;">
 
                             <header>
-                                <h3 style="color:#FFAB76;">One-time Clean up</h3>
+                                <h3 style="color:#FFAB76;"><font face = "Pacifico">One-time Clean up</font><h3>
                             </header>
                             <p style="color:#FFAB76;">Suit Up will go through all of your online profiles and produce a report detailing potential outliers on your platforms. No need to give us any passwords - We will complete a thorough web search for your content. </p>
 
@@ -63,7 +63,7 @@
                         <section class="4u 12u(narrower) feature" style="background-color:#19BCCB; padding-right: 2em; padding-bottom: 2em">
 
                             <header>
-                                <h3 style="color:#242E70;">Intermittent Monitoring</h3>
+                                <h3 style="color:#242E70;"><font face = "Pacifico">Intermittent Monitoring</font></h3>
                             </header>
                             <p style="color:#242E70;">We'll start with a complete overhaul of what is visible publicly from your profiles. You can give us your account information and we will check in on content every 6 months. As always, your information is protected.</p>
 
@@ -71,7 +71,7 @@
                         <section class="4u 12u(narrower) feature" style="background-color: #242E70; padding-right: 2em; padding-bottom: 2em">
 
                             <header>
-                                <h3 style="color:#FFAB76;">Consistent Management</h3>
+                                <h3 style="color:#FFAB76;"><font face = "Pacifico">Consistent Management</font></h3>
                             </header>
                             <p style="color:#FFAB76;">This package starts from scratch with what you have on your profiles. We will build a professional presence online that will help you in your employment search. This is the best package we offer and we guarantee your satisfaction.</p>
 
@@ -82,26 +82,44 @@
                 <ul class="actions">
 
                 </ul>
+                <h3>Personal Information</h3>
 
                 <form action=validate.php method=POST>
-                    <input type=email name="email" required placeholder="Enter a valid email address">
+                    <input type=email name="email" required placeholder="Enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                     <br>
                     <input type=password placeholder="Password" name="password" id="password" required>
                     <br>
                     <input type=password placeholder="Confirm Password" name="password2" id="confirm_password" required>
                     <br>
-                    <input type=text placeholder="First name" name="fname" id="fname" required>
+                    <input type=text placeholder="First name" name="fname" id="fname" required pattern="[A-Za-z]+">
                     <br>
-                    <input type=text placeholder="Last name" name="lname" id="lname" required>
+                    <input type=text placeholder="Last name" name="lname" id="lname" required pattern="[A-Za-z]+">
                     <br>
                     <input type=text placeholder="Address" name="address" required>
                     <br>
-                    <input type=text placeholder="City" name="city" id="city" required>
+                    <input type=text placeholder="City" name="city" id="city" required pattern="[A-Za-z]+">
                     <br>
-                    <input type=text placeholder="State" name="state" id="state" required>
+                    <input type=text placeholder="State" name="state" id="state" required pattern="[A-Za-z]+">
                     <br>
-                    <input type=number placeholder="Zip code" name="zip" required>
+                    <input type=text placeholder="Zip code" name="zip" required pattern="\d{5}-?(\d{4})?">
                     <br>
+                    <br>
+                    <h3>Banking Information</h3>
+
+                    <input type=text placeholder="Credit card number" name="cardNum" required pattern="[0-9]{16}">
+                    <br>
+                    <input type=text placeholder="CVV" name="cvv" required pattern="[0-9]{3}">
+                    <br>
+                    <input type=date name="date" required>
+                    <br>
+                    <br>
+                
+                    <input type="radio" name="oneTime" value="male"> One Time Clean Up
+                    <br>
+                    <input type="radio" name="inter" value="female"> Intermittent Monitoring
+                    <br>
+                    <input type="radio" name="consistent" value="other"> Consistent Management
+<br>
                     <br>
 
                     <input type=submit name="submit">

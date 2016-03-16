@@ -46,7 +46,7 @@ mysql_query($siteUsers);
    		$db->query($query) or die ("Invalid insert " . $db->error); 
     
    }
-  header("Location: index.html");
+  header("Location: index.php");
     
 }
 
