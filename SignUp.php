@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+        // This identifies your website in the createToken call below
+        Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+        // ...
+
+    </script>
 </head>
 
 <body class="no-sidebar">
@@ -104,27 +111,50 @@
                     <input type=text placeholder="Zip code" name="zip" required pattern="\d{5}-?(\d{4})?">
                     <br>
                     <br>
-                    <h3>Banking Information</h3>
+                </form>
+                <h3>Banking Information</h3>
 
-                    <input type=text placeholder="Credit card number" name="cardNum" required pattern="[0-9]{16}">
-                    <br>
-                    <input type=text placeholder="CVV" name="cvv" required pattern="[0-9]{3}">
-                    <br>
-                    <input type=date name="date" required>
-                    <br>
-                    <br>
-                
+                <form action="" method="POST" id="payment-form">
+                    <span class="payment-errors"></span>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Card Number</span>
+                            <input type="text" size="20" data-stripe="number" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>CVC</span>
+                            <input type="text" size="4" data-stripe="cvc" />
+                        </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>Expiration (MM)</span>
+                            <input type="text" size="2" data-stripe="exp-month" />
+                        </label>
+                        <span> Expiration (YYYY)</ </span>
+                        <input type="text" size="4" data-stripe="exp-year" />
+                    </div>
+
                     <input type="radio" name="oneTime" value="male"> One Time Clean Up
                     <br>
                     <input type="radio" name="inter" value="female"> Intermittent Monitoring
                     <br>
                     <input type="radio" name="consistent" value="other"> Consistent Management
-<br>
+                    <br>
                     <br>
 
-                    <input type=submit name="submit">
 
+                    <button type="submit">Submit Payment</button>
                 </form>
+
+
+
+
                 </article>
             </div>
         </div>
@@ -146,7 +176,19 @@
 
         </script>
 
+jQuery(function($) {
+  $('#payment-form').submit(function(event) {
+    var $form = $(this);
 
+    // Disable the submit button to prevent repeated clicks
+    $form.find('button').prop('disabled', true);
+
+    Stripe.card.createToken($form, stripeResponseHandler);
+
+    // Prevent the form from submitting with the default action
+    return false;
+  });
+});
 
 
 
