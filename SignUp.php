@@ -10,12 +10,8 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script type="text/javascript">
-        // This identifies your website in the createToken call below
-        Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
-        // ...
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    </script>
 </head>
 
 <body class="no-sidebar">
@@ -91,7 +87,7 @@
                 </ul>
                 <h3>Personal Information</h3>
 
-                <form action=validate.php method=POST>
+                  <form action="validate.php" method="POST" id="payment-form">
                     <input type=email name="email" required placeholder="Enter a valid email address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                     <br>
                     <input type=password placeholder="Password" name="password" id="password" required>
@@ -111,10 +107,10 @@
                     <input type=text placeholder="Zip code" name="zip" required pattern="\d{5}-?(\d{4})?">
                     <br>
                     <br>
-                </form>
+               
                 <h3>Banking Information</h3>
 
-                <form action="" method="POST" id="payment-form">
+             
                     <span class="payment-errors"></span>
 
                     <div class="form-row">
@@ -136,7 +132,7 @@
                             <span>Expiration (MM)</span>
                             <input type="text" size="2" data-stripe="exp-month" />
                         </label>
-                        <span> Expiration (YYYY)</ </span>
+                        <span> Expiration (YYYY) </span>
                         <input type="text" size="4" data-stripe="exp-year" />
                     </div>
 
@@ -147,7 +143,6 @@
                     <input type="radio" name="consistent" value="other"> Consistent Management
                     <br>
                     <br>
-
 
                     <button type="submit">Submit Payment</button>
                 </form>
@@ -177,20 +172,8 @@
         </script>
 
         <script>
-            jQuery(function($) {
-                $('#payment-form').submit(function(event) {
-                    var $form = $(this);
-
-                    // Disable the submit button to prevent repeated clicks
-                    $form.find('button').prop('disabled', true);
-
-                    Stripe.card.createToken($form, stripeResponseHandler);
-
-                    // Prevent the form from submitting with the default action
-                    return false;
-                });
-            });
-
+                // This identifies your website in the createToken call below
+        Stripe.setPublishableKey('pk_test_Nflmptc88rUEA5MOLQcv4DlF');
 
             function stripeResponseHandler(status, response) {
                 var $form = $('#payment-form');
@@ -208,6 +191,20 @@
                     $form.get(0).submit();
                 }
             };
+            
+               jQuery(function($) {
+                $('#payment-form').submit(function(event) {
+                    var $form = $(this);
+
+                    // Disable the submit button to prevent repeated clicks
+                    $form.find('button').prop('disabled', true);
+
+                    Stripe.card.createToken($form, stripeResponseHandler);
+
+                    // Prevent the form from submitting with the default action
+                    return false;
+                });
+            });
 
         </script>
 
