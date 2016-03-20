@@ -70,34 +70,11 @@ mysql_query($siteUsers);
 
   $sender = "suituptoday2016.com";
   $receiver = strip_tags($_POST['email']);
-    $bodyPass = "Thank you for signing up for Suit Up! You have been charged $19.99!";
-
- 
-
-$price = 0;
-$Money = $_POST['money'];
-if($Money =='oneTime'){
-    $message= "One Time Clean Up: $9.99 \n";
-    $price += 9.99;
-}
-
-if($Money == 'inter'){
-    $message = "Intermediate Clean Up: $19.99 \n";
-    $price += 19.99;
-}
-
-if($Money == 'consistent'){
-    $message = "Consistent Clean Up: $29.99 \n";
-    $price += 29.99;
-}
-    
-// Put information into the message
- 
+  $bodyPass = "Thank you for signing up for Suit Up! You have been charged $19.99!";
 
        
-       
-       $query = "insert into SiteUsers values ('$Email', '$Password', '$First', '$Last', '$Address', '$City', '$State', '$Zip')"; 
-   		$db->query($query) or die ("Invalid insert " . $db->error); 
+$query = "insert into SiteUsers values ('$Email', '$Password', '$First', '$Last', '$Address', '$City', '$State', '$Zip')"; 
+$db->query($query) or die ("Invalid insert " . $db->error); 
    
        
 require_once('/Applications/XAMPP/xamppfiles/Stripe/init.php');
@@ -105,9 +82,18 @@ require_once('/Applications/XAMPP/xamppfiles/Stripe/init.php');
 
 //Get the credit card details submitted by the form
 $token = $_POST['stripeToken'];
+       
+       
+ 
 
-// Create the charge on Stripe's servers - this will charge the user's card
-try {  
+$price = 0;
+$Money = $_POST['money'];
+if($Money =='oneTime'){
+    $message= "One Time Clean Up: $9.99 \n";
+    $price += 9.99;
+    
+    
+    try {  
   $charge = \Stripe\Charge::create(array(
     "amount" => 999, // amount in cents, again
     "currency" => "usd",
@@ -136,10 +122,91 @@ try {
 } catch(\Stripe\Error\Card $e) {
 
 }
+    
+}
+
+if($Money == 'inter'){
+    $message = "Intermediate Clean Up: $19.99 \n";
+    $price += 19.99;
+    
+    try {  
+  $charge = \Stripe\Charge::create(array(
+    "amount" => 1999, // amount in cents, again
+    "currency" => "usd",
+    "source" => $token,
+    "description" => "Example charge"
+    ));
+    
+    
+    
+    $mail->addAddress($receiver);
+  $mail->SetFrom("suituptoday2016@gmail.com", "Suit Up");
+  $mail->Subject = "Purchase";
+  $mail->Body = "Thank you $First $Last! \n Your Purchase History From Suit Up: \n $message Total Price: $$price \n \n";
+      
+
+  // echo 'Everything ok so far' . var_dump($mail);
+  if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+   } 
+   else { 
+      //header("Location: index.php");
+   }
+    
+    
+} catch(\Stripe\Error\Card $e) {
+
+}
+    
+}
+
+if($Money == 'consistent'){
+    $message = "Consistent Clean Up: $29.99 \n";
+    $price += 29.99;
+    
+    
+    try {  
+  $charge = \Stripe\Charge::create(array(
+    "amount" => 2999, // amount in cents, again
+    "currency" => "usd",
+    "source" => $token,
+    "description" => "Example charge"
+    ));
+    
+    
+    
+    $mail->addAddress($receiver);
+  $mail->SetFrom("suituptoday2016@gmail.com", "Suit Up");
+  $mail->Subject = "Purchase";
+  $mail->Body = "Thank you $First $Last! \n Your Purchase History From Suit Up: \n $message Total Price: $$price \n \n";
+      
+
+  // echo 'Everything ok so far' . var_dump($mail);
+  if(!$mail->send()) {
+    echo 'Message could not be sent.';
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+   } 
+   else { 
+      //header("Location: index.php");
+   }
+    
+    
+} catch(\Stripe\Error\Card $e) {
+
+}
+}
+    
+
        
        
        
    }
+    
+    
+    
+    
+    
   header("Location: index.php");
     
 
