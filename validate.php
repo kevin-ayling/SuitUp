@@ -29,7 +29,7 @@ if($db->connect_error){
   
 //making the table    
 
-$siteUsers = $db->query("create table SiteUsers(email char(30) not null, password char(30) not null, first char(30) not null, last char(30) not null, address char(30) not null, city char(30) not null, state char(15) not null, zip char(15) not null)");
+$siteUsers = $db->query("create table SiteUsers(email char(30) not null, password char(30) not null, first char(30) not null, last char(30) not null, address char(30) not null, city char(30) not null, state char(15) not null, zip char(15) not null, package char(30) not null)");
 mysql_query($siteUsers);
     
     
@@ -70,10 +70,10 @@ mysql_query($siteUsers);
 
   $sender = "suituptoday2016.com";
   $receiver = strip_tags($_POST['email']);
-  $bodyPass = "Thank you for signing up for Suit Up! You have been charged $19.99!";
+  $Money = $_POST['money'];
 
        
-$query = "insert into SiteUsers values ('$Email', '$Password', '$First', '$Last', '$Address', '$City', '$State', '$Zip')"; 
+$query = "insert into SiteUsers values ('$Email', '$Password', '$First', '$Last', '$Address', '$City', '$State', '$Zip', '$Money')"; 
 $db->query($query) or die ("Invalid insert " . $db->error); 
    
        
@@ -87,7 +87,6 @@ $token = $_POST['stripeToken'];
  
 
 $price = 0;
-$Money = $_POST['money'];
 if($Money =='oneTime'){
     $message= "One Time Clean Up: $9.99 \n";
     $price += 9.99;

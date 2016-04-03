@@ -15,6 +15,10 @@
 		vertical-align: baseline;
 	}
 
+.centerDiv { 
+    width: 60%; height:200px; margin: 10 auto; background-color:#FFA500; 
+} 
+
 
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
