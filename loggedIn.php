@@ -81,7 +81,7 @@ $_SESSION["error"] = "You have not logged in. Please log in first";
 
 
                 <?php
-            $db = mysqli_connect('localhost', 'root', 'password', 'test');
+            $db = mysqli_connect('localhost', 'root', 'clabmell', 'test');
 if($db->connect_error){
     print "Error - Could not connnect to MySQL";
     exit;
@@ -98,85 +98,87 @@ if(!$result) {
 $query = $row['package'];
         }
             
-    if($query == "oneTime"){        
-            ?>
+    if($query == "oneTime"){
 
-       <div class="container">
-                            <div class="centerDiv">
-                                <section style="background-color: #242E70; padding: 3em; text-align: center;">
+            ?>
+                        <div class="container">
+                            <div style = "margin-bottom: 50">
+                                
+                                <section style="background-color: #242E70; padding: 2em; text-align: center;">
 
                                     <header>
-                                        <h3 style="color:#FFAB76;"><font face = "Pacifico">One-time Clean up</font></h3>
-                                    </header>
-                                    <p style="color:#FFAB76;">Suit Up will go through all of your online profiles and produce a report detailing potential outliers on your platforms. No need to give us any passwords - We will complete a thorough web search for your content. </p>
-
+                                <h3 style="color:#FFAB76;"><font face = "Pacifico">One-Time Clean Up: $9.99 </font></h3>
+                            </header>
+                                    <p style="color:#FFAB76;">Suit Up will go through all of your online profiles and produce a report detailing potential outliers on your platforms. No need to give us any passwords - We will complete a thorough web search for your content.</p>
+                            <p style="color:#FFAB76;"> Last Billing Cycle: April 7, 2016 <br>
+                                    Member since: March 31, 2016</p>
                                 </section>
 
                             </div>
                         </div>
-                    <div class="container" id="main">
 
-                        <head>
-                            <style type="text/css">
-                                td,
-                                th,
-                                table {
-                                    border: medium solid black;
-                                }
-                                
-                                tr {
-                                    text-align: center;
-                                }
-                                
-                                th {
-                                    font-weight: bold;
-                                }
+                        <div class="container" id="main"  >
 
-                            </style>
-                        </head>
+                            <head>
+                                <style type="text/css">
+                                    td,
+                                    th,
+                                    table {
+                                        border: medium solid black;
+                                    }
+                                    
+                                    tr {
+                                        text-align: center;
+                                    }
+                                    
+                                    th {
+                                        font-weight: bold;
+                                    }
 
-                        <body>
+                                </style>
+                            </head>
 
-                            <table>
-                                <caption><b>One Time Clean Up</b></caption>
+                            <body>
 
-
-                                <tr>
-                                    <th> Social Media Platform </th>
-                                    <th> Status </th>
-                                </tr>
-                                <tr>
-                                    <td>Facebook</td>
-                                    <td>
-                                        <FONT COLOR="green">Finished with 5 clean ups</FONT>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>LinkedIn</td>
-                                    <td>
-                                        <FONT COLOR="green">Finished with 0 clean ups</FONT>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Twitter</td>
-                                    <td>
-                                        <FONT COLOR="red">Currently Under Review</FONT>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Instagram</td>
-                                    <td>
-                                        <FONT COLOR="red">Currently Under Review</FONT>
-                                    </td>
-                                </tr>
-                            </table>
-                        </body>
-                    </div>
+                                <table>
+                                    <caption><b>One-Time Clean Up</b></caption>
 
 
-                    <?php
-    } 
+                                    <tr>
+                                        <th> Social Media Platform </th>
+                                        <th> Status </th>
+                                    </tr>
+                                    <tr>
+                                        <td>Facebook</td>
+                                        <td>
+                                            <FONT COLOR="green">Generating Report</FONT>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>LinkedIn</td>
+                                        <td>
+                                            <FONT COLOR="red">Currently Under Review</FONT>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Twitter</td>
+                                        <td>
+                                            <FONT COLOR="red">Currently Under Review</FONT>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Instagram</td>
+                                        <td>
+                                            <FONT COLOR="red">Currently Under Review</FONT>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </body>
+                        </div>
+
+                        <?php          
+            }
             if($query == "inter"){
 
             ?>
@@ -188,6 +190,7 @@ $query = $row['package'];
                                     <header>
                                 <h3 style="color:#FFAB76;"><font face = "Pacifico">Intermittent Monitoring: $19.99 per month</font></h3>
                             </header>
+                                    <p style="color:#FFAB76;">We'll start with a complete overhaul of what is visible publicly from your profiles. You can give us your account information and we will check in on content every 6 months. As always, your information is protected.</p>
                             <p style="color:#FFAB76;"> Last Billing Cycle: April 7, 2016 <br>
                                     Member since: March 31, 2016</p>
                                 </section>
@@ -258,93 +261,85 @@ $query = $row['package'];
                         <?php          
             }
             if($query == "consistent"){
+
             ?>
-
-
-    <div class="container">
-                            <div class="centerDiv">
-                                <section style="background-color: #242E70; padding: 3em; text-align: center;">
+                        <div class="container">
+                            <div style = "margin-bottom: 50">
+                                
+                                <section style="background-color: #242E70; padding: 2em; text-align: center;">
 
                                     <header>
-                                <h3 style="color:#242E70;"><font face = "Pacifico">Intermittent Monitoring</font></h3>
-                            <header>
-                                <h3 style="color:#FFAB76;"><font face = "Pacifico">Consistent Management</font></h3>
+                                <h3 style="color:#FFAB76;"><font face = "Pacifico">Consistent Management: $29.99 per month</font></h3>
                             </header>
-                            <p style="color:#FFAB76;">This package starts from scratch with what you have on your profiles. We will build a professional presence online that will help you in your employment search. This is the best package we offer and we guarantee your satisfaction.</p>
-
+                                    <p style="color:#FFAB76;">This package starts from scratch with what you have on your profiles. We will build a professional presence online that will help you in your employment search. This is the best package we offer and we guarantee your satisfaction.</p>
+                            <p style="color:#FFAB76;"> Last Billing Cycle: April 7, 2016 <br>
+                                    Member since: March 31, 2016</p>
                                 </section>
 
                             </div>
                         </div>
-                
-                            <div class="container" id="main">
 
-                                <head>
-                                    <style type="text/css">
-                                        td,
-                                        th,
-                                        table {
-                                            border: medium solid black;
-                                        }
-                                        
-                                        tr {
-                                            text-align: center;
-                                        }
-                                        
-                                        th {
-                                            font-weight: bold;
-                                        }
+                        <div class="container" id="main"  >
 
-                                    </style>
-                                </head>
+                            <head>
+                                <style type="text/css">
+                                    td,
+                                    th,
+                                    table {
+                                        border: medium solid black;
+                                    }
+                                    
+                                    tr {
+                                        text-align: center;
+                                    }
+                                    
+                                    th {
+                                        font-weight: bold;
+                                    }
 
-                                <body>
+                                </style>
+                            </head>
 
-                                    <table>
-                                        <caption><b>Consistent Monitoring</b></caption>
+                            <body>
 
-
-                                        <tr>
-                                            <th> Social Media Platform </th>
-                                            <th> Status </th>
-                                        </tr>
-                                        <tr>
-                                            <td>Facebook</td>
-                                            <td>
-                                                <FONT COLOR="green">Finished with 0 clean ups</FONT>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>LinkedIn</td>
-                                            <td>
-                                                <FONT COLOR="green">Finished with 1 clean up</FONT>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Twitter</td>
-                                            <td>
-                                                <FONT COLOR="green">Finished with 1 clean up</FONT>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Instagram</td>
-                                            <td>
-                                                <FONT COLOR="red">Currently Under Review</FONT>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </body>
-                            </div>
+                                <table>
+                                    <caption><b>Consistent Management</b></caption>
 
 
+                                    <tr>
+                                        <th> Social Media Platform </th>
+                                        <th> Status </th>
+                                    </tr>
+                                    <tr>
+                                        <td>Facebook</td>
+                                        <td>
+                                            <FONT COLOR="green">Finished with 15 clean ups</FONT>
+                                        </td>
 
+                                    </tr>
+                                    <tr>
+                                        <td>LinkedIn</td>
+                                        <td>
+                                            <FONT COLOR="red">Up to date</FONT>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Twitter</td>
+                                        <td>
+                                            <FONT COLOR="red">Report Generated</FONT>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Instagram</td>
+                                        <td>
+                                            <FONT COLOR="red">Changes made 4/1/2016</FONT>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </body>
+                        </div>
 
-
-
-
-
-                            <?php          
+                        <?php          
             }
             ?>
 

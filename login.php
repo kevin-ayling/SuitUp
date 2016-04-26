@@ -9,6 +9,10 @@ if(isset($_SESSION["login"])){
       header("Location: loggedIn.php");
 
 }
+    if(isset($_SESSION["error"])){
+        echo $_SESSION["error"];
+        unset($_SESSION["error"]);
+    }
 ?>
     
 <head>

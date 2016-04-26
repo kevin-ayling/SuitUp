@@ -21,7 +21,7 @@ $Zip = $_POST['zip'];
 if($_POST['password']==$_POST['password2']){
  
     //connect to database
-$db = mysqli_connect('localhost', 'root', 'password', 'test');
+$db = mysqli_connect('localhost', 'root', 'clabmell', 'test');
 if($db->connect_error){
     print "Error - Could not connnect to MySQL";
     exit;
@@ -40,10 +40,11 @@ mysql_query($siteUsers);
     
  
     
- if($row = mysqli_fetch_array($result)){
+ if($row == mysqli_fetch_array($result)){
     //there is already someone with that email so throw an error message
-
-
+     $_SESSION["error"] = "Someone already exists with this email, please try again!";
+  
+     
      header("Location: SignUp.php");
     }      
     
@@ -52,7 +53,7 @@ mysql_query($siteUsers);
     
 
  //inserts people into table   
- $mailpath = '/Applications/XAMPP/xamppfiles/PHPMailer';
+ $mailpath = '/xampp/htdocs/phpmailer';
  $path = get_include_path();
   set_include_path($path . PATH_SEPARATOR . $mailpath);
   require 'PHPMailerAutoload.php';
@@ -77,7 +78,7 @@ $query = "insert into SiteUsers values ('$Email', '$Password', '$First', '$Last'
 $db->query($query) or die ("Invalid insert " . $db->error); 
    
        
-require_once('/Applications/XAMPP/xamppfiles/Stripe/init.php');
+require_once('/xampp/htdocs/stripe/init.php');
 \Stripe\Stripe::setApiKey(" sk_test_zaI1GQi4SHH7RoBgwob6cAaw");
 
 //Get the credit card details submitted by the form

@@ -33,6 +33,13 @@
                                     <li><a href="AboutUs.php"><font face = "Merienda One">About Us</font></a></li>
                                     <li><a href="SignUp.php"><font face = "Merienda One">Sign Up</font></a></li>
                                     <li><a href="Login.php"><font face = "Merienda One">Account</font></a></li>
+                                    <?php
+                                    session_start();
+                                    if(isset($_SESSION["Name"])){
+                                    	?> <li><a href="logout.php"><font face = "Merienda One">Log out</font></a></li>
+                                    	<?php
+                                    }
+                                    ?>
                                     
 								</ul>
 							</nav>
@@ -57,54 +64,54 @@
 				</div>
 
 			<!-- Features 1 -->
-				<div class="wrapper">
-					<div class="container">
+				
+					<div class="container" >
 						<div class="row features">
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper first">
-									<a href="#" class="image featured" ><img src="http://4vector.com/i/free-vector-broom-clip-art_116051_Broom_clip_art_hight.png" alt="" height ="200" width="175"style="PADDING-TOP: 15px">
+									<a href="#" class="image featured" >
                                         </a>
 								</div>
 								<header>
-									<h3>Sit back and let us do the clean up</h3>
+                                    <h3 style="color:#242E70;"><font face = "Pacifico">Sit back and let us do the clean up</font></h3>
 								</header>
-								<p>Don't worry about going through years of tagged photos and regrettable uploads, let us do the work for you! Suit Up works closely with you to securely clean up your profiles of choice, never breaching your privacy. </p>
+                                <p style="color:#242E70;"><b style="color:#242E70;">Don't worry about going through years of tagged photos and regrettable uploads, let us do the work for you! Suit Up works closely with you to securely clean up your profiles of choice, never breaching your privacy.</b></p>
 								<ul class="actions">
 				
 								</ul>
 							</section>
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper">
-									<a href="#" class="image featured" ><img src="http://clipart-finder.com/data/mini/preferences-system.png" alt="" height ="200" width="175"/></a>
+									<a href="#" class="image featured" ></a>
 								</div>
 								<header>
-									<h3>Recieve a detailed report to customize your experience</h3>
+                                    <h3 style="color:#242E70;"><font face = "Pacifico">Recieve a detailed report to customize your experience</font></h3>
 								</header>
-								<p>If you want to pick and choose how you clean up, you can opt for your own personalized report to notify you about what could be a red flag! You can use this in conjunction with or separate from our clean sweep monitoring.</p>
+                                <p style="color:#242E70;"><b style="color:#242E70;">If you want to pick and choose how you clean up, you can opt for your own personalized report to notify you about what could be a red flag! You can use this in conjunction with or separate from our clean sweep monitoring.</b></p>
 								<ul class="actions">
 									
 								</ul>
 							</section>
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper">
-									<a href="#" class="image featured"><img src="http://www.clker.com/cliparts/T/C/c/p/N/T/orange-calendar-img-md.png" alt="" height ="200" width="175" style="PADDING-TOP: 15px"  /></a>
+									<a href="#" class="image featured"></a>
 								</div>
 								<header>
-									<h3>One time, a few times or constantly</h3>
+                                    <h3 style="color:#242E70;"><font face = "Pacifico">One time, a few times or constantly</font></h3>
 								</header>
-								<p>We work to create an experience tailored to YOU. Whether you want a one time sweep of all platforms or monthly monitoring, we do it all! Customize a plan today to keep your social media presence in tip top shape.</p>
+								<p style="color:#242E70;"><b style="color:#242E70;">We work to create an experience tailored to YOU. Whether you want a one time sweep of all platforms or monthly monitoring, we do it all! Customize a plan today to keep your social media presence in tip top shape.</b></p>
 								<ul class="actions">
 									
 								</ul>
 							</section>
 						</div>
-                    </div>
+                    
             </div>
 			<!-- Promo -->
 				<div id="promo-wrapper">
 					<section id="promo">
                         
-                        <h2><font face = "Merienda One"> "51 percent of employers who research job candidates on social media said they’ve found content that caused them to not hire the candidate" -Career Builder</font></h2>
+                        <h2 style="color:#242E70;"><font face = "Merienda One"> "51 percent of employers who research job candidates on social media said they’ve found content that caused them to not hire the candidate" -Career Builder</font></h2>
                         </section>
 					
 

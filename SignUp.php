@@ -1,6 +1,18 @@
 <html>
 <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+<?php
+session_start();
 
+
+if(isset($_SESSION["login"])){
+      header("Location: loggedIn.php");
+
+}
+    if(isset($_SESSION["error"])){
+        echo $_SESSION["error"];
+        unset($_SESSION["error"]);
+    }
+?>
 <head>
     <title>Suit Up</title>
     <meta charset="utf-8" />
@@ -31,6 +43,13 @@
                         <li><a href="AboutUs.php"><font face = "Merienda One">About Us</font></a></li>
                         <li><a href="SignUp.php"><font face = "Merienda One">Sign Up</font></a></li>
                         <li><a href="Login.php"><font face = "Merienda One">Account</font></a></li>
+                        <?php
+                                 
+                                    if(isset($_SESSION["Name"])){
+                                    	?> <li><a href="logout.php"><font face = "Merienda One">Log out</font></a></li>
+                                    	<?php
+                                    }
+                                    ?>
                     </ul>
                 </nav>
             </div>

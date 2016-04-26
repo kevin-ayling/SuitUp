@@ -7,7 +7,7 @@ $sessionPassword = $_POST['password'];
 
 //$db = mysqli_connect('localhost', 'root', 'password', 'test');
 
-$db = mysqli_connect('localhost', 'root', 'password', 'test');
+$db = mysqli_connect('localhost', 'root', 'clabmell', 'test');
 if($db->connect_error){
     print "Error - Could not connnect to MySQL";
     exit;
@@ -26,7 +26,8 @@ if(!$result) {
      header("Location: loggedIn.php");
         }
 else{
-    
+    $_SESSION["error"] = "Incorrect login credentials, please try again!";
+     header("Location: login.php");
     //Return to page with a session error that they aren't logged in 
     
 }
